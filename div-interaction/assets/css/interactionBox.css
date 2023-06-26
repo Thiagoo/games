@@ -1,0 +1,32 @@
+#Box1Container {
+  display: flex;
+  flex-direction: row;
+}
+
+#Box2Container {
+  display: flex;
+  flex-direction: row;
+}
+
+#box1 {
+  width: 150px;
+  height: 100px;
+  background-color: green;
+  color: #000000;
+}
+#box2 {
+  display: flex;
+  position: relative;
+  width: 150px;
+  height: 100px;
+  background-color: red;
+  color: #000000;
+}
+
+#box3 {
+  width: 90px;
+  height: 60px;
+  background-color: #481dbd;
+  color: #000000;
+  display: none;
+}

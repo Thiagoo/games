@@ -1,0 +1,128 @@
+@colorWhite: #ffffff;
+@backgroundBlue: #27408b;
+@testeBorder: solid 1px none;
+
+.radius(@corner: 30px) {
+  border-radius: @corner;
+  -moz-border-radius: @corner;
+  -webkit-border-radius: @corner;
+  -o-border-radius: @corner;
+}
+.global() {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 22px;
+}
+* {
+  .global();
+}
+li {
+  list-style: none;
+}
+#container {
+  @media (min-width: 568px) {
+    width: 40%;
+  }
+  width: 100%;
+  height: auto;
+  margin: 4px auto;
+}
+
+.page {
+  @media (min-width: 568px) {
+    width: 400px;
+    height: 380px;
+  }
+  width: 100%;
+  height: 500px;
+  padding: 2px;
+  background-color: @backgroundBlue;
+}
+.box-text {
+  border: @testeBorder;
+
+  .text {
+    text-transform: uppercase;
+    color: @colorWhite;
+    font-size: 40px;
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+  }
+}
+.content {
+  display: flex;
+  justify-content: center;
+
+  .box-value {
+    width: 15%;
+    display: block;
+    position: relative;
+    border: @testeBorder;
+    align-self: end;
+
+    #number {
+      background-color: @backgroundBlue;
+      color: @colorWhite;
+      border: none;
+      border-bottom: 2px solid @colorWhite;
+      text-align: center;
+      position: relative;
+      left: 5px;
+    }
+    .input-value {
+      margin: 20px auto;
+      width: 100%;
+      height: 40px;
+      overflow: hidden;
+      padding: 15px;
+      border-bottom: solid 2px #008b8b;
+    }
+  }
+
+  .box-numbers {
+    @media (min-width: 568px) {
+      position: relative;
+      top: 10px;
+      left: 20px;
+      width: 80%;
+      transform: none;
+      height: auto;
+    }
+
+    display: block;
+    position: relative;
+    border: @testeBorder;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateY(10%) translateX(-50%);
+    height: 48px;
+    padding: 10px;
+
+    .keyboard {
+      li {
+        width: 40px;
+        height: 40px;
+        color: #fff;
+        background-color: rgb(123, 102, 165);
+        cursor: pointer;
+        float: left;
+        margin: 10px 20px 10px 20px;
+        line-height: 40px;
+        text-align: center;
+        .radius();
+      }
+      li:active {
+        box-shadow: 0px 1px 1px 0px #444651;
+      }
+      li:hover {
+        background-color: #bef9f0;
+        color: #6c73fa;
+        transition: 0.2s;
+      }
+    }
+  }
+}
